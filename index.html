@@ -7,13 +7,96 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <label for="fname">First name:</label><br />
-    <input type="text" id="fname" name="fname" /><br />
-    <label for="lname">Last name:</label><br />
-    <input type="text" id="lname" name="lname" />
-    <br />
-    <input type="form" />
-    <br />
-    <input type="button" />
+    <h1>REGISTRERINGSFORMULÄR</h1>
+
+    <h3>Logga in</h3>
+    <form action="https://httpbin.org/anything" method="post">
+      <div class="container">
+        <div class="login">
+          <label for="fname">First name:</label>
+          <input type="text" id="fname" name="fname" required />
+
+          <label for="lname">Last name:</label>
+          <input type="text" id="lname" name="lname" required />
+
+          <label for="email">Email</label>
+          <input id="email" name="email" type="email" required />
+
+          <label for="username">Username</label>
+          <input id="username" name="username" type="text" required />
+
+          <label for="password">Password</label>
+          <input id="password" name="password" type="password" required />
+          <button class="login-btn" type="submit">Logga in</button>
+        </div>
+
+        <div class="form-right">
+          <p>Which taxi do you require</p>
+          <div class="radio">
+            <div class="radiorow">
+              <input type="radio" name="radio" value="HTML" id="car" required />
+              <label for="radio">Car</label>
+            </div>
+
+            <div class="radiorow">
+              <input type="radio" name="radio" value="HTML" id="van" required />
+              <label for="radio">Van</label>
+            </div>
+
+            <div class="radiorow">
+              <input type="radio" name="radio" value="HTML" id="tuk" required />
+              <label for="radio">Tuk Tuk</label>
+            </div>
+
+            <p>Extras</p>
+            <div class="radiorow">
+              <input type="checkbox" name="baby" id="baby" />
+              <label for="baby">Baby Seat</label>
+            </div>
+
+            <div class="radiorow">
+              <input type="checkbox" name="wheelchair" id="wheelchair" />
+              <label for="wheelchair">Wheelchair Access</label>
+            </div>
+
+            <div class="radiorow">
+              <input type="checkbox" name="stock" id="stock" />
+              <label for="stock">Stock Tip</label>
+            </div>
+          </div>
+        </div>
+
+        <div class="location">
+          <label>Pickup Day:</label>
+          <input type="date" id="day" name="whenday" value="day" required />
+
+          <label>Pickup Time:</label>
+          <input type="time" id="time" name="whentime" required />
+
+          <label>Dropoff Place</label>
+          <select name="pickupplace" id="pickupplace">
+            <option value="stockholm">Stockholm</option>
+            <option value="goteborg">Göteborg</option>
+            <option value="molmo">Malmö</option>
+          </select>
+        </div>
+
+        <div class="message">
+          <p>Message</p>
+          <input id="message" name="text" type="text" />
+
+          <button class="send-btn" type="submit">Skicka bokningen</button>
+        </div>
+      </div>
+    </form>
+
+    <form action="https://httpbin.org/anything" method="post">
+      <div class="forgot">
+        <h5>Glömt lösenord?</h5>
+        <p class="forgot-p">Fyll i din email</p>
+        <input name="email" type="email" required />
+        <button class="forgot-btn" type="submit">Glömt lösenord</button>
+      </div>
+    </form>
   </body>
 </html>
